@@ -1,16 +1,81 @@
-# React + Vite
+# Ecommer Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Flow
 
-Currently, two official plugins are available:
+User Visits the Website
+Sees a list of 20 or more products pre-loaded
+User is able to click on the product, clicking on the product, open up a detailed product page,
+User is able to add the item to the cart, delete, increase or decrease quantity of the item
+User can then proceed to checkout page and buy the product there
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+So I basically need these sections in my project
 
-## React Compiler
+1. Header
+   header includes, logo,
+   a search bar,
+   user accounts
+   settings
+   log in/out (dummy)
+2. Hero Component to showcase some products maybe - only visual nothing interactive
+3. Showcase Products of length 20 or more
+4. Product Component > Product Card
+5. Footer
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+6. Detailed Product View Page Component
+7. Checkout Page component
 
-## Expanding the ESLint configuration
+# Data Soource: https://dummyjson.com/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Folder Structure:
+
+src/
+│
+├── assets/
+│ ├── images/
+│ └── icons/
+│
+├── data/
+│ └── products.js
+│
+├── components/
+│ ├── Header/
+│ │ ├── Header.jsx
+│ │ └── Header.css
+│ │
+│ ├── Hero/
+│ │ ├── Hero.jsx
+│ │ └── Hero.css
+│ │
+│ ├── Product/
+│ │ ├── ProductCard.jsx
+│ │ ├── ProductList.jsx
+│ │ └── Product.css
+│ │
+│ ├── Footer/
+│ │ ├── Footer.jsx
+│ │ └── Footer.css
+│ │
+│ └── Cart/
+│ ├── CartItem.jsx
+│ ├── CartSummary.jsx
+│ └── Cart.css
+│
+├── pages/
+│ ├── Home.jsx
+│ ├── ProductDetails.jsx
+│ ├── Cart.jsx
+│ └── Checkout.jsx
+│
+├── context/
+│ ├── CartContext.jsx
+│ └── cartReducer.js
+│
+├── hooks/
+│ └── useLocalStorage.js (optional, later)
+│
+├── utils/
+│ └── formatPrice.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css

@@ -1,3 +1,5 @@
+import Login from "./Pages/Auth/Login"
+
 export default function App() {
-  return <h1>E-Store</h1>
+  return <Login />
 }
