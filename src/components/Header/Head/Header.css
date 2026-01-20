@@ -1,0 +1,30 @@
+.header-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232f3e;
+    min-height: 45px;
+    color: white;
+    font-weight: 500;
+}
+
+.header-logo {
+    width: 80px;
+}
+
+.header-deliver {
+    width: 100px;
+}
+
+.header-search:active,
+.header-search:focus,
+.header-search:focus-visible {
+    border: 2px solid orange;
+    border-radius: 10px;
+}
+
+.header-search input {
+    border: none;
+    outline: none;
+}
